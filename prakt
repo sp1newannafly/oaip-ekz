@@ -46,3 +46,1094 @@ int main()
 	return 0;
 
 }
+
+3.	Даны два числа a и b. Найти их среднее арифметическое и среднее геометрическое.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	double a, b, s;
+	cout << "Введите любое число: a ";
+	cin >> a;
+	cout << "Введите любое число: b ";
+	cin >> b;
+	(a + b) / 2;
+	s = (a * b);
+	sqrt(s);
+	cout << "Среднее арифметическое модулей числа a и b: " << (a + b) / 2 << endl;
+	cout << "Среднее геометрическое модулей числа a и b: " << (sqrt(s)) << endl;
+	return 0;
+}
+
+4.	Выведите на экран большее из двух любых чисел, вводимых с клавиатуры.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b, big;
+	cout << "Введите два чисал : ";
+	cin >> a >> b;
+	if (a > b)
+	{
+		big = a;
+		cout << "Большее из двух чисел: " << big;
+	}
+	{
+
+	
+	if (b > a)
+	{
+		big = b;
+		cout << "Большее из двух чисел: " << big;
+	}
+}
+	if (b=a)
+	{
+		cout << "Значения равны";
+	}
+}
+
+
+5.	Составить программу, которая проверяет, является ли четным введенное целое число.
+
+#include <iostream> 
+using namespace std;
+int main()
+{
+    setlocale(0, "Russian");
+    int number;
+
+    cout << "Введите число " << endl;
+    cin >> number;
+
+    if (number = 0)
+        cout << "Ни нечётное и ни четное " << endl;
+    if (number % 2 == 0)
+        cout << "Чётное " <<endl;
+    else
+        cout << "Нечётное " << endl;
+    
+}
+
+6.	Вычислить значение функции:
+
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	double x, y;
+	cout << "Введите число: ";
+	cin >> x;
+	if (x > 3){
+		y = x * x + 5;
+		cout << " y = " << y;
+	}
+
+	else (x <= 3);
+	y = x - 8;
+	cout << " y = " <<y;
+}
+
+7.	Найти действительные корни квадратного уравнения  .
+
+#include <iostream> 
+#include <cmath> 
+using namespace std;
+
+int main()
+{
+    setlocale(0, "Russian");
+    double a, b, c, d, x1, x2;
+
+    cout << "Введите a\n";
+    cin >> a;
+    cout << "Введите b\n";
+    cin >> b;
+    cout << "Введите c\n";
+    cin >> c;
+    if (a == 0) {
+
+        cout << "Коэффициент A не может быть равен 0" << endl;
+
+        return 0;
+
+    }
+    d = b * b - 4 * a * c; 
+    if (d > 0)
+    {
+        x1 = ((-b) + sqrt(d)) / (2 * a);
+        x2 = ((-b) - sqrt(d)) / (2 * a);
+        cout << "x1 = " << x1 << "\n";
+        cout << "x2 = " << x2 << "\n";
+    }
+    if (d == 0)
+    {
+        x1 = -(b / (2 * a));
+        cout << "x1 = x2 = " << x1 << "\n";
+    }
+    if (d < 0) 
+        cout << "D < 0, Действительных корней уравнения не существует";
+}
+
+8.	Составить программу для определения стоимости разговора по телефону (25 руб. 1 мин) с учетом скидки 20%, предоставляемой по субботам и воскресеньям.
+Исходные данные:	Результат:
+1. Длительность разговора (целое число мин): 10
+День недели (1 – понедельник, … , 7 – воскресенье): 2	1. Стоимость разговора: 250 руб.
+
+2. Длительность разговора (целое число мин): 4
+День недели (1 – понедельник, … , 7 – воскресенье): 7	2. Стоимость разговора: 80 руб.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(0, "Russian");
+    int day, time;
+    double c;
+    cout << "Введите стоимоть\n";
+    cin >> c;
+    cout << "Введите продолжительность\n";
+    cin >> time;
+    cout << "Введите день\n";
+    cin >> day;
+    
+    if (day > 8) {
+        cout << "Другой день введи умник" << endl;
+        return 0;
+    }
+        
+    
+    c *= time;
+
+    if (day == 6 || day == 7)
+        c -= c * 0.2;
+    cout << "Стоимость разговора: " << c  <<" руб. " << endl;
+     
+    return 0;
+}
+
+9.	В зависимости от стажа работы на предприятии введена надбавка в размере:
+для работающих от 5 до 10 лет – 10 %;
+для работающих от 10 до 15 лет – 15 %;
+для работающих свыше 15 лет – 20 %.
+Составить программу, которая по заданному стажу работы определит размер надбавки в процентах (при решении задачи используйте оператор выбора).
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int y, selfzp, zp, p;
+	cout << "Ваша заработная плата: ";
+	cin >> selfzp;
+	cout << "Ваш стаж работы: ";
+	cin >> y;
+	if (y < 5) {
+		cout << "У вас нет надбавки" << endl;
+		return 0;
+	}
+	
+	if (y >= 5 && y < 11)
+	{
+		p = 10;
+		zp = p * (selfzp / 100);
+	}
+	if (y >= 11 && y < 16);
+	{
+		p = 15;
+		zp = p * (selfzp / 100);
+	}
+	if (y >= 16);
+	{
+		p = 20;
+		zp = p * (selfzp / 100);
+	}
+	cout << "Ваша надбавки к зп составляет: " << zp;
+}
+
+10.	Составьте программу, которая определяла бы вид треугольника по длинам его сторон a, b и с (если данные отрезки позволяют его построить). Условием того, что треугольник может быть составлен, является одновременное выполнение следующих условий: a+b>c, b+c>a, a+c>b, а также то, что треугольники могут быть разными: равносторонними, равнобедренными, прямоугольными, равнобедренными прямоугольными и т.д. Кроме того, следует учесть, что в качестве длин сторон могут быть случайно введены как нулевые, так и отрицательные значения.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b, c;
+	cout << endl << "Введите а ";
+	cin >> a;
+	cout << endl << "Введите b ";
+	cin >> b;
+	cout << endl << "Введите c ";
+	cin >> c;
+	if (a > 0 && b > 0 && c > 0)
+
+	{
+		if (a + b > c && a + c > b && b + c > a)
+		{
+			cout << "Такой треугольник существует";
+		if (a == b && b == c && a == c)
+		{
+			cout << "Это треугольник равносторонний" << endl;
+		}
+		else if (a == b || b == c || a == c)
+		{
+			cout << "Это треугольник равнобедренный" << endl;
+		}
+		else if (a * a + b * b == c * c || c * c + b * b == a * a + c * c == b * b)
+		{
+			cout << "Этот треугольник прямоугольный" << endl;
+		}
+			return 0;
+		}
+		else
+		{
+			cout << "шиз?" << endl;
+			return 0;
+		}
+	}
+	
+}
+
+11.	Составьте программу вычисления суммы первых 15 членов ряда 1+2+3+…+n.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n = 15;
+	int sum = 0;
+	int i = 0;
+	while (i < n)
+	{
+		i++;
+		sum += i;
+	}
+	cout << sum;
+	return 0;
+}
+
+12.	Найти сумму натуральных чисел от 2 до 56, кратных 5.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b;
+	a = 0;
+	for (int i = 2; i < 57; i++)
+	{
+		b = i % 5;
+		if (b == 0)
+		{
+			a = a + i;
+			cout << a << "\n";
+		}
+	}
+	return(0);
+}
+
+13.	Найти произведение натуральных нечетных чисел от n1 до n2.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b, n1, n2;
+	cout << "n1 =: "; cin >> n1;
+	cout << "n2 =: "; cin >> n2;
+	a = 1;
+	for (int i = n1; i < n2; i++)
+	{
+		if (b = i % 2 == 1)
+		{
+			a = a * i;
+			cout << a << "\n";
+		}
+	}
+	return(0);
+}
+
+14.	Найти сумму положительных нечетных чисел, меньших 100.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b;
+	a = 0;
+	for (int i = 1; i < 101; i++)
+	{
+		b = i % 2;
+		if (b == 1)
+		{
+			a = a + i;
+			cout << a << "\n";
+		}
+	}
+	return(0);
+}
+
+15.	*Дано натуральное число n (n 1999). Определить, является ли оно палиндромом («перевертышем»), с учетом четырех цифр. Например, палиндромами являются числа: 2222, 6116, 0440.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b, c, e;
+	cout << "Введите четырехзначное число: ";
+	cin >> a;
+	if (a >= 999 && a <= 10000)
+	{
+		b = a / 1000;
+		a = a % 1000;
+		c = a / 100;
+		a = a % 100;
+		e = a / 10;
+		a = a % 10;
+		if (b == a && c == e)
+		{
+			cout << "Это число палиндром";
+		}
+		else
+		{
+			cout << "Это число не палиндром";
+		}
+	}
+	else
+		cout << "Вы ввели не четырехзначное число";
+	return 0;
+}
+
+16.	Дано целое число N (>0), являющейся некоторой степенью числа 2: N=2k. Найти целое число k – показатель этой степени.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Rus");
+	int n;
+	cout << "N:";
+	cin >> n;
+	int k = 0;
+	while (n >= 2) {
+		++k;
+		n /= 2;
+	}
+	cout << k;
+	return 0;
+}
+
+17.	Найти сумму чисел от 1, кратных 5. Складывать до тех пор, пока сумма не станет больше N.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    int sum = 0;
+    cout << "n: ";
+    cin >> n;
+
+    for (int i = 5; i < n; i += 5)
+        sum += i;
+
+    cout << " Sum = " << sum << endl;
+}
+
+18.	Составить программу нахождения суммы нечетных чисел последовательности от 0 до 100, с помощью цикла do...while.
+
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "Russian");
+	int sum, i;
+	sum = 0;
+	i = 0;
+	do {
+		if (i % 2 != 0)
+		{
+			sum += i;
+		}
+			i++;
+		} 
+	while (i <= 100);
+
+
+	cout << "сумма нечетных чисел от 0 до 100: " << sum;
+}
+
+19.	Создайте калькулятор, выполняющий четыре арифметических действия над дробями. Формулы, демонстрирующие выполнение арифметических операций над дробями, приведены ниже. 
+Сложение: a/b + c/d = (a*d + b*c)/(b*d). 
+Вычитание: a/b - c/d = (a*d - b*c)/(b*d). 
+Умножение: a/b*c/d = (a*c)/(b*d). 
+Деление: a/b/c/d = (a*d)/(b*c). 
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(0, "Russian");
+    int ch1, zn1, ch2, zn2, ch3, zn3;
+    char c = 0;
+    do
+    {
+        cout << "Введите числитель первой дроби: " << endl;
+        cin >> ch1;
+        cout << "Введите знаменатель первой дроби: " << endl;
+        cin >> zn1;
+        cout << "Введите числитель второй дроби: " << endl;
+        cin >> ch2;
+        cout << "Введите знаменатель первой дроби: " << endl;
+        cin >> zn2;
+        cout << "Введите желаемую операцию(+, -, *, /): " << endl;
+        cin >> c;
+        switch (c)
+        {
+        case '+':
+        {
+            cout << ch1 * zn2 + ch2 * zn1 << "/" << zn1 * zn2 << endl;
+            break;
+        }
+        case '-':
+        {
+            cout << ch1 * zn2 - ch2 * zn1 << "/" << zn1 * zn2 << endl;
+            break;
+        }
+        case '*':
+        {
+            cout << ch1 * ch2 << "/" << zn1 * zn2 << endl;
+            break;
+        }
+        case '/':
+        {
+            cout << ch1 * zn2 << "/" << zn1 * ch2 << endl;
+            break;
+        }
+        default:
+        {
+            cout << "Вы не ввели существующую операцию!";
+        }
+        }
+        cout << "\nЖелаете выполнить еще одну операцию? (y/n) ";
+        cin >> c;
+    } while (c == 'y');
+    return 0;
+}
+
+20.(19)	Пользователь должен сначала ввести первый операнд, затем знак операции и второй операнд. После вычисления результата программа должна
+отобразить его на экране и запросить пользователя о его желании произвести еще одну операцию.
+21.	Одномерный массив заполнен целыми числами. Вычислить сумму его элементов, кратных 5.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int sum = 0, n, i = 1;
+	int s[10];
+	cout << "Введите n: ";
+	cin >> n;
+	for (i; i <= n; i++)
+	{
+		cout << "s[" << i << "] = ";
+		cin >> s[i];
+		if (s[i] % 5 == 0)
+		{
+			sum += s[i];
+		}
+	}
+	cout << "Сумма = " << sum;
+}
+
+22.	Одномерный массив заполнен целыми числами. Возвести в квадрат элементы, стоящие на четных местах.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int n, s[10], i = 1;
+	cout << "Введите n: ";
+	cin >> n;
+	for (i; i <= n; i++)
+	{
+		cout << "s[" << i << "] = ";
+		cin >> s[i];
+		if (i % 2 == 0)
+		{
+			cout << "= " << s[i] * s[i] << endl;
+		}
+	}
+}
+23.	Одномерный массив заполнен целыми числами. Удвойте четные и утройте нечетные элементы.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int n, i = 1, s[10];
+	cout << "Введите n: ";
+	cin >> n;
+	for (i; i <= n; i++)
+	{
+		cout << "s[" << i << "] = ";
+		cin >> s[i];
+		if (s[i] % 2 == 0)
+		{
+			cout << "= " << s[i] * 2 << endl;
+		}
+		else
+		{
+			cout << "= " << s[i] * 3 << endl;
+		}
+	}
+}
+
+24.	Заполнить одномерный массив из 50 элементов случайными числами от -5 до 5. Организовать вывод массива в строку. Сколько получилось отрицательных чисел?
+
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int RandomDigits[50];
+	float sum = 0;
+	srand(time(NULL));
+	for (int i = 1; i <= 50; i++)
+	{
+		cout << "s[" << i << "] = ";
+		RandomDigits[i] = static_cast <double> (rand()) / (RAND_MAX + 1) * (5 + 5) - 5;
+		cout << RandomDigits[i] << endl;
+		if (RandomDigits[i] < 0)
+		{
+			sum++;
+		}
+	}
+	cout << "Количество отрицательных чисел = " << sum << endl;
+	return 0;
+}
+
+25.	Заполнить массив случайными целыми числами из интервала от -7 до 25.
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int s[100];
+	int n;
+	cout << "Введите n: ";
+	cin >> n;
+	srand(time(NULL));
+	for (int i = 1; i <= n; i++)
+	{
+		cout << "s[" << i << "] = ";
+		s[i] = static_cast <double> (rand()) / (RAND_MAX + 1) * (25 + 7) - 7;
+		cout << s[i] << endl;
+	}
+	return 0;
+}
+
+26.	Написать программу, которая проверяет, есть ли во введенном с клавиатуры массиве элементы с одинаковыми значением.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int s[10], n;
+	cout << "Введите n = ";
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "s[" << i << "] = ";
+		cin >> s[i];
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i; j < n; j++)
+		{
+			if (s[i] == s[j])
+				cout << "Есть";
+			else
+				cout << "Нету";
+			return 1;
+		}
+	}
+	return 0;
+}
+
+27.	Найти произведение нечетных элементов двумерного массива целых чисел. 
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	const int m = 20, n = 15;
+	int i, j, proz;
+	int a[m][n];
+	proz = 1;
+	srand(time(NULL));
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; i <= n; i++)
+		{
+			a[i][j] = static_cast <double> (rand()) / (RAND_MAX + 1) * (5 + 5) - 5;
+			cout << "a[" << i << "] = ";
+			cout << a[i][j];
+			cout << endl;
+		}
+		cout << endl;
+	}
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= n; j++)
+		{
+			if (a[i][j] % 2)
+			{
+				proz = proz * a[i][j];
+			}
+		}
+	}
+	cout << "Произведение всех нечетных чисел =  " << proz;
+	return 0;
+}
+
+28.	Найти сумму элементов двумерного массива, находящихся ниже главной диагонали.
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int n = 4;
+	int i, j, sum;
+	int a[5][5];
+	sum = 0;
+	srand(time(NULL));
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= n; j++)
+		{
+			a[i][j] = static_cast <double> (rand()) / (RAND_MAX + 1) * (5 + 5) - 5;
+			cout << "a[" << i << "]" << "[" << j << "]" << " = ";
+			cout << a[i][j];
+			cout << endl;
+			if (i > j)
+			{
+				cout << a[i][j];
+				cout << endl;
+				sum += a[i][j];
+			}
+		}
+	}
+	cout << "Сумма элементов ниже главной диагонали = " << sum;
+	return 0;
+}
+
+29.	Найти максимальный элемент дополнительной диагонали квадратной матрицы.
+
+#include <iostream>
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "");
+    srand(time(NULL));
+    int n;
+    cin >> n;
+    int mas[100][100];
+    int i = 0, j = 0;
+    int max_glav = mas[100][110];
+    cout << setw(20) << "матрица" << endl;
+
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            mas[i][j] = static_cast <double> (rand()) / (RAND_MAX + 1) * (5 - 1) + 1;
+            cout << mas[i][j] << "  ";
+        }
+        cout << endl;
+    }
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (i == j & mas[i][j] > max_glav)
+            {
+                max_glav = mas[i][j];
+            }
+        }
+    }
+    cout << " Максимальный элемент главной диагонали ";
+    cout << max_glav << endl;
+    return 0;
+}
+
+30.	Разработать функцию min(a,b) для нахождения минимального из двух чисел. Вычислить с помощью нее минимальное значение из четырех чисел x, y, z, v.
+
+#include <iostream>
+using namespace std;
+int min(int a, int b)
+{
+	if (a > b)
+	{
+		return b;
+	}
+	else
+		return a;
+}
+int main()
+{
+	setlocale(0, "Russian");
+	int a, b, x, y;
+	cout << "Введите 4 числа: ";
+	cin >> a >> b >> x >> y;
+	int z = min(min(min(x, y), b), a);
+	cout << "Минимальное число  = " << z << endl;
+	return 0;
+}
+
+
+31.	Разработать функцию max(a,b) для нахождения максимального из двух чисел. Вычислить с помощью нее значение выражения z=max(x,2yx)+max(5x+3y,y).
+
+#include <iostream>
+using namespace std;
+
+int x(int i, double n)
+{
+    int Max;
+    if (i > n)
+    {
+        Max = i;
+    }
+    else
+    {
+        Max = n;
+    }
+    return Max;
+}
+int main()
+{
+    int k, f, z;
+    setlocale(0, "ru");
+    cout << "Введите число k: ";
+    cin >> k;
+    cout << "Введите число f: ";
+    cin >> f;
+    cout << "Максимальным числом является число " << x(k, f) << endl;
+    z = x(k, 2 * k * f) + x(5 * k + 3 * f, f);
+    cout << "z = " << z;
+    return 0;
+}
+
+32.	Ввести 3 целых массива из n чисел каждый: А, В, С. Вычислить значение  , где max(A) — максимальный элемент массива А (аналогично max(B) и max(C)). Вычисление максимального  элемента массива оформить в виде подпрограммы. Формула имеет смысл, если max(C)<>0.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int f(int n[], int x)
+{
+    int max = 0;
+    for (int i = 0; i < x; i++)
+    {
+        if (n[i] > max)
+            max = n[i];
+    }
+    return max;
+}
+int cot(string _B, int m[]) {
+    int n = 0, y;
+    cout << "Введите размер массива " << _B << ":" << endl;
+    cin >> n;
+    cout << "Введите элементы массива " << _B << ":" << endl;
+    for (int i = 0; i < n; i++)
+        cin >> m[i];
+    y = f(m, n);
+    cout << "Макимальный элемент массива " << _B << ": " << y << endl;
+    return y;
+}
+
+int main()
+{
+    setlocale(0, "ru");
+    int r = 0, A, B, C;
+    int a[100], b[100], c[100];
+    A = cot("A", a);
+    B = cot("B", b);
+    C = cot("C", c);
+    if (C != 0) {
+        r = (A * B) / C;
+        cout << "R = " << r << endl;
+    }
+    else {
+        cout << "Данное выражение не имеет значения" << endl;
+    }
+    system("pause");
+    return 0;
+}
+
+33.	Дан массив a[n,n]. Найти сумму элементов по каждому столбцу (по каждой строке). Элементы исходного массива и результат записать в текстовый файл Result.txt.
+
+#include <fstream>	
+#include <iostream> 
+#include <iomanip> 
+using namespace std;
+int main()
+{
+	ofstream outfile("Bloknot.txt");
+	setlocale(0, "Russian");
+	int s[100][100], n, m;
+	cout << "Введите кол-во строк: " << endl;
+	cin >> n;
+	cout << "Введите кол-во столбцов: " << endl;
+	cin >> m;
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+
+		{
+
+			cout << "Введите S[" << i << "][" << j << "]: ";
+			cin >> s[i][j];
+		}
+
+	for (int i = 0; i < n; i++)
+
+	{
+
+		for (int j = 0; j < m; j++) {
+			cout << setw(9) << s[i][j] << " ";
+			outfile << setw(9) << s[i][j] << " ";
+
+		}
+
+		cout << endl;
+		outfile << endl;
+
+	}
+
+	cout << "Сумма элементов по каждому столбцу" << endl;
+	outfile << "Сумма элементов по каждому столбцу" << endl;
+	int sum = 0;
+	for (int j = 0; j < m; j++) {
+		for (int i = 0; i < n; i++)
+			sum += s[i][j];
+		cout << setw(10) << sum;
+		outfile << setw(10) << sum;
+		sum = 0;
+
+	}
+
+	cout << endl;
+	system("pause");
+	return 0;
+
+}
+
+34.	Дан массив a[n,n]. Найти максимальный элемент массива среди элементов, находящихся ниже главной диагонали. Элементы исходного массива размещаются в текстовом файле Input.txt, результат записать в текстовый файл Output.txt.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+	setlocale(0, "Russian");
+	int n, a[100][100], Max = a[1][0];
+	ifstream input("input.txt");
+	cout << "Введите N строк и столбцов:" << endl;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			input >> a[i][j];
+	for (int i = 0; i < n; i++)
+	{
+
+		for (int j = 0; j < n; j++)
+			cout << a[i][j] << " ";
+		cout << endl;
+	}
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			if (i > j)
+			{
+				if (a[i][j] > Max)
+					Max = a[i][j];
+			}
+	cout << endl;
+	cout << Max << endl;
+	ofstream output("output.txt");
+	output << Max;
+	system("pause");
+	return 0;
+}
+
+35.	Из слова «ВЕЛИКОЛЕПНЫЙ» с помощью строковых функций получить слова: ВЕЛИК, КОЛ, ЛИК, ЛЕВ, ВЕК, вывести их на экран и определить их длину.
+
+#include <iostream>
+using namespace std;
+int main() {
+
+	setlocale(0, "ru");
+	char str[12] = { 'В','Е','Л','И','К','О','Л','Е','П','Н','Ы','Й' };
+
+	cout << endl << str[0] << str[1] << str[2] << str[3] << str[4];
+	cout << endl << str[4] << str[5] << str[6];
+	cout << endl << str[2] << str[3] << str[4];
+	cout << endl << str[2] << str[1] << str[0];
+	cout << endl << str[0] << str[1] << str[4];
+	return 0;
+}
+
+36.	Задан текст. Удалите в тексте фрагмент, заключенный в круглые скобки.
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    setlocale(0, "ru");
+    int n = 0;
+    string txt = "hubabuba(kashamalasha)hababana";
+    char O[100];
+    for (int i = 0; i < txt.length(); i++) {
+        if (txt[i] == '(') {
+            O[n] = i;
+            n++;
+        }
+        if (txt[i] == ')') {
+            O[n] = i;
+            n++;
+        }
+    }
+    cout << txt.replace(O[0], O[1] - O[0] + 1, "") << endl;
+    return 0;
+
+
+37.	Задан текст. Слова в тексте разделены пробелами. В конце текста – точка. Заменить второе слово в тексте на введенное слово.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    setlocale(0, "russian");
+    int X[100], n;
+    string x, txt = "oshiete oshiete yo sono shikumi.";
+    n = 0;
+    cout << txt << endl;
+    cout << "Введите слово: ";
+    cin >> x;
+    for (int i = 0; i < txt.length(); i++)
+        if (txt[i] == ' ') {
+            X[n] = i; n++;
+        }
+    cout << txt.replace(X[0] + 1, X[1] - 1 - X[0], x) << endl;
+    return 0;
+}
+
+38.	Дано предложение, состоящее из слов, отделенных друг от друга одной звездочкой (*). Удалите из этого предложения слова длиной N символов.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    setlocale(0, "ru");
+    int X[100], n = 0, m;
+    string txt = "Ощихитео*Ощихитео*Великий*Господин";
+    cout << txt << endl;
+    cout << "Введите длину N символов: ";
+    cin >> m;
+    for (int i = 0; i <= txt.length(); i++)
+        if (txt[i] == '*') {
+            X[n] = i; n++;
+        }
+    for (int i = n; i >= 0; i--)
+        if ((X[i] - X[i - 1] - 1) == m)
+            txt.replace(X[i - 1], X[i] - X[i - 1], "");
+
+    cout << txt << endl;
+    return 0;
+}
+39.	Составить программу выделения следующих множеств из множества целых чисел от 1 до 30:	множество чисел, кратных 2;	множество чисел, кратных 3.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "ru");
+    int mt[29], aa = -1;
+    cout << "Все числа: ";
+    while (aa < 29) {
+        aa = aa + 1;
+        mt[aa] = aa + 1;
+        cout << mt[aa] << " ";
+    }
+    cout << endl;
+    cout << "Числа, кратные 3: ";
+    aa = -1;
+    while (aa < 29) {
+        aa = aa + 1; mt[aa] = aa + 1;
+        if (mt[aa] % 3 == 0)
+            cout << mt[aa] << " ";
+    }
+    cout << endl;
+    cout << "Числа, кратные 2: ";
+    aa = -1;
+    while (aa < 29) {
+        aa = aa + 1; mt[aa] = aa + 1;
+        if (mt[aa] % 2 == 0)
+            cout << mt[aa] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+40.	Даны три множества Х1, Х2, Х3, содержащие целые числа. Введите их с клавиатуры. Мощность каждого равна 10. Сформируйте новое множество Y=(Х1+Х2)-(Х3*Х2). Выведите на экран множество Y и его мощность. Проверьте, есть ли во множестве числа кратные 5.
+
+
+41.	Упорядочить по возрастанию элементы каждой строки матрицы:
+ 
+42.	Написать программу, которая генерирует массив из 25 элементов, а затем сортировку его по четности, т.е. в левой стороне массива должны быть нечетные числа, а в правой стороне – четные.
+43.	В прямоугольной таблице В из n строк и m столбцов требуется поменять местами две строки. 
+44.	Дано слово, состоящее из десяти латинских букв. Упорядочить буквы в слове по алфавиту.
+45.	Написать программу, которая включает в себя массив из строк, который представляет собой список фамилий известных писателей. Необходимо отсортировать этот список в лексикографическом порядке, т.е. от «А» до «Я».
+46.	Создайте структуру с именем employee, содержащую два поля: номер сотрудника типа int и величину его пособия в долларах типа float. Запросите с клавиатуры данные о трех сотрудниках, сохраните их в трех структурных переменных типа employee и выведите информацию о каждом из сотрудников на экран. 
+47.	Создайте структуру типа date, содержащую три поля типа int: месяц, день и год. Попросите пользователя ввести день, месяц и год в формате 31/12/2002, сохраните введенное значение в структурной переменной, а затем извлеките данные из этой переменной и выведите их на экран в том же формате, в каком они вводились.
+48.	Вывести ряд чисел Фибоначчи, используя рекурсивную функцию.
+49.	Написать программу для вычисления по формуле   (n и m – вводятся). Вычисление факториала оформить в виде рекурсивной функции.
+50.	Напишите рекурсивную подпрограмму для операции умножения двух чисел, выражая ее через операцию сложения так, что произведение Х и 0 равно 0, а произведение Х и Y равно сумме Х и произведения Х и Y – 1.
+51.	Сконструировать программу для вычисления площади треугольника по трем сторонам (пользуясь формулой Герона).  .
+52.	Сконструировать программу для определения средней выручки магазина в течение недели (ежедневная выручка магазина за неделю занесена в одномерный массив).
+53.	Сконструировать программу поиска четырехзначного числа, которое при делении на 133 дает в остатке 125, а при делении на 134 дает в остатке 111.
+54.	Сконструировать программу для определения, является ли заданное число степенью 3.
+55.	Сконструируйте программу для определения значения максимального из четных элементов двумерного массива.
+56.	Сконструируйте программу для определения значения минимального из нечетных элементов двумерного массива.

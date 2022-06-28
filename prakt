@@ -1700,6 +1700,50 @@ int main()
 
 55.	Сконструируйте программу для определения значения максимального из четных элементов двумерного массива.
 
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    srand(time(NULL));
+    int n, m, min;
+    cout <<"Введите количество рядков массива: ";
+    cin >> n;
+    cout <<"Введите количество столбцов массива: ";
+    cin >> m;
+    int** a = new int* [n];
+    for(int i = 0; i < n; i++){
+        a[i] = new int[m];
+        for(int j = 0; j < m; j++){
+            a[i][j] = rand() % 21 - 10;
+            cout << a[i][j] <<" ";
+        }
+        cout << endl;
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            if(a[i][j] % 2 != 0){
+                min = a[i][j];
+                break;
+            }
+        }
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            if(a[i][j] % 2 != 0){
+                if(min > a[i][j]){
+                    min = a[i][j];
+                }
+            }
+        }
+    }
+    cout <<"Минимальное значения двумерного массива: "<< min <<endl;
+    delete[] a;
+    for(int i = 0; i < n; i++){
+        delete[] a[i];
+    }
+    return 0;
+}
 
 
 56.	Сконструируйте программу для определения значения минимального из нечетных элементов двумерного массива.
